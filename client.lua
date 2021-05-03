@@ -38,6 +38,7 @@ Click.constructor = function(button, state, _,_,_,_,_, clickedElement)
 											dxDrawText(value[1], x+15, y+7, 150, size+7, tocolor(200,200,200,250), 1, font)
 										end
 										if isMouseInPosition(x, y, 150, size+7) and getKeyState("mouse1") then
+											Click.close()
 											value[2]()
 										end
 										y = y + 32
@@ -65,19 +66,19 @@ Click.pullOptions = function(element)
 	if type == 'vehicle' then
 		pulledOptions = {
 			{"Example1", function()
-				Click.close()
+				print('Example 1')
 			end,},
 		}
 	elseif type == 'player' then
 		pulledOptions = {
 			{"Example2", function()
-				Click.close()
+				print('Example 2')
 			end,},
 		}
 	elseif type == 'ped' then
 		pulledOptions = {
 			{"Example3", function()
-				Click.close()
+				print('Example 3')
 			end,},
 		}
 	end
