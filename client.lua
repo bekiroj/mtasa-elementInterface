@@ -29,7 +29,7 @@ Click.constructor = function(button, state, _,_,_,_,_, clickedElement)
 									local x, y = getScreenFromWorldPosition(elementPos)
 									dxDrawRectangle(x, y, 150, size*counter, tocolor(0,0,0,255))
 									dxDrawOuterBorder(x, y, 150, size*counter, 2, tocolor(10,10,10,250))
-									for index, value in pairs(pulledOptions) do
+									for key, value in pairs(pulledOptions) do
 										if isMouseInPosition(x, y, 150, size+7) then
 											dxDrawRectangle(x, y, 150, size+7, tocolor(5,5,5,250))
 											dxDrawText(value[1], x+15, y+7, 150, size+7, tocolor(200,200,200,250), 1, font)
